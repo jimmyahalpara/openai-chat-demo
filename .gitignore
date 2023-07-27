@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+# and should not be checked in to version control.
+venv/
+Lib/
+Scripts/
+api_key.json

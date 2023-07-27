@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "28f14362-dacd-426e-98ea-34b1db5eb90e",
+		"name": "Flask-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20455275"
+	},
+	"item": [
+		{
+			"name": "createPrompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prompt",
+							"value": "Hello, what is my name ?",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/chat/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chat",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPromptResponse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/chat/0/get-response",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chat",
+						"0",
+						"get-response"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePrompt",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "new_prompt",
+							"value": "Thanks",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/chat/0/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chat",
+						"0",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePrompt",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/chat/0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"chat",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
